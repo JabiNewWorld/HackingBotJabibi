@@ -109,7 +109,7 @@ async def avatar(ctx, *, member: discord.Member = None):
 
 format = "%a, %d %b %Y | %H:%M:%S %ZGMT"
 
-@client.command()
+@bot.command()
 @commands.guild_only()
 async def serverinfo(ctx):
     embed = discord.Embed(
