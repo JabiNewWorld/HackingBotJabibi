@@ -17,13 +17,12 @@ from urllib.request import Request, urlopen
 from discord import channel as req 
 from discord import embeds as req
 from discord import user as req 
-from pyfliget import Figlet
+
+
 
 TOKEN = "AQUI PONES EL TOKEN DE TU BOT" #PARA TOKEN DEL BOT
 
-figlet = Figlet(font='slant')
 
-print(figlet.renderText("JABIBI BOT/n AL ATAQUE"))
 
 intents = discord.Intents(messages=True, guilds=True)
 intents = discord.Intents.all()
@@ -34,6 +33,21 @@ intents.members = True
 client = discord.Client(intents=intents)
 
 bot.remove_command('help')
+
+print(f"""
+      
+       ▄▄▄██▀▀▀▄▄▄       ▄▄▄▄    ██▓ ▄▄▄▄    ██▓    ▄▄▄▄    ▒█████  ▄▄▄█████▓
+   ▒██  ▒████▄    ▓█████▄ ▓██▒▓█████▄ ▓██▒   ▓█████▄ ▒██▒  ██▒▓  ██▒ ▓▒
+   ░██  ▒██  ▀█▄  ▒██▒ ▄██▒██▒▒██▒ ▄██▒██▒   ▒██▒ ▄██▒██░  ██▒▒ ▓██░ ▒░
+▓██▄██▓ ░██▄▄▄▄██ ▒██░█▀  ░██░▒██░█▀  ░██░   ▒██░█▀  ▒██   ██░░ ▓██▓ ░ 
+ ▓███▒   ▓█   ▓██▒░▓█  ▀█▓░██░░▓█  ▀█▓░██░   ░▓█  ▀█▓░ ████▓▒░  ▒██▒ ░ 
+ ▒▓▒▒░   ▒▒   ▓▒█░░▒▓███▀▒░▓  ░▒▓███▀▒░▓     ░▒▓███▀▒░ ▒░▒░▒░   ▒ ░░   
+ ▒ ░▒░    ▒   ▒▒ ░▒░▒   ░  ▒ ░▒░▒   ░  ▒ ░   ▒░▒   ░   ░ ▒ ▒░     ░    
+ ░ ░ ░    ░   ▒    ░    ░  ▒ ░ ░    ░  ▒ ░    ░    ░ ░ ░ ░ ▒    ░      
+ ░   ░        ░  ░ ░       ░   ░       ░      ░          ░ ░           
+                        ░           ░              ░                   
+      """)
+
 
 @bot.event
 async def on_ready():
